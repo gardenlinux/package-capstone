@@ -1,0 +1,5 @@
+# dh-python 7.20260125 (snapshot) crashes in pybuild quiet mode with
+# "AssertionError" in tools.py (isinstance(log_output, typing.TextIO) is
+# False on Python 3.13), so do not let terse/DEB_BUILD_OPTIONS put pybuild
+# into quiet mode for this package.
+DEB_BUILD_OPTIONS="${DEB_BUILD_OPTIONS/terse/}"
